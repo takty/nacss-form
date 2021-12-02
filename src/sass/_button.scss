@@ -1,0 +1,34 @@
+/**
+ *
+ * Buttons
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-30
+ *
+ */
+
+
+@use 'common';
+
+
+@mixin button {
+	@extend %rect-base;
+	padding   : 0.5em 1em;
+
+	display        : inline-flex;
+	justify-content: center;
+	align-items    : center;
+
+	border-color: transparent;
+	cursor: pointer;
+
+	color: Canvas;
+	background-color: var(--nc-form-mark-color);
+
+	&:disabled {
+		// background-color: var(--nc-form-disabled-color);
+		--nc-form-mark-color: var(--nc-form-disabled-color);
+
+		cursor: not-allowed;
+	}
+}

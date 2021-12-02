@@ -1,0 +1,84 @@
+/**
+ *
+ * Form
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-02
+ *
+ */
+
+
+@use 'control';
+@use 'button';
+@use 'input';
+@use 'select';
+@use 'rad-chk';
+
+
+:root {
+	@include control.custom-property;
+}
+
+.form-control {
+	@include control.form-control;
+
+	& + .form-control {
+		margin-top: 1em;
+	}
+}
+
+button,
+input[type='submit'],
+input[type='button'],
+input[type='reset'] {
+	@include button.button;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+input[type='number'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='datetime'],
+input[type='datetime-local'] {
+	@include input.input;
+}
+input[type='range'] {
+	@include input.input-range;
+}
+input[type='file'] {
+	@include input.input-file;
+}
+input[type='color'] {
+	@include input.input-color;
+}
+
+
+.form-control-number {
+	@include input.input-number-wrapper;
+}
+
+textarea {
+	@include input.input;
+}
+
+.form-control-select {
+	@include select.select-wrapper;
+}
+
+input[type='radio'] {
+	@include rad-chk.radio;
+}
+input[type='checkbox'] {
+	@include rad-chk.checkbox;
+}
+
+fieldset {
+	border: 1px solid #aaa;
+	border-radius: var(--nc-form-border-radius);
+}

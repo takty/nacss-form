@@ -1,0 +1,37 @@
+%focus {
+	&:focus-visible {
+		outline: none;
+		box-shadow: 0 0 2px 3px rgba(#7bf, 0.75);
+	}
+}
+
+%rect-base {
+	appearance: none;
+
+	border          : var(--nc-form-border);
+	border-radius   : var(--nc-form-border-radius);
+
+	color      : inherit;
+	font       : inherit;
+	font-size  : 1em;
+	line-height: 1.15;
+
+	@extend %focus;
+}
+
+%input-base {
+	@extend %rect-base;
+	padding   : 0.5em;
+	background-color: Canvas;
+
+	&:disabled {
+		color: var(--nc-form-disabled-color);
+		cursor: not-allowed;
+		border-color: var(--nc-form-border-color-disabled);
+		opacity: 1;
+		&::placeholder {
+			color: inherit;
+		}
+	}
+}
+

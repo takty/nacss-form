@@ -1,0 +1,44 @@
+/**
+ *
+ * Select
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-02
+ *
+ */
+
+
+@use 'common';
+
+
+@mixin select-wrapper {
+	display: inline-flex;
+
+	position: relative;
+	&::after {
+		content  : '';
+		position : absolute;
+		top      : 50%;
+		right    : 0.25em;
+		transform: translateY(-50%);
+
+		width : 1em;
+		height: 1em;
+
+		box-shadow: inset 0 0 0 2em var(--nc-form-mark-color);  // For print
+		clip-path : polygon(20% 25%, 50% 75%, 80% 25%);
+
+		pointer-events: none;
+	}
+	select {
+		@extend %input-base;
+		padding-inline-end: 1.5em;
+	}
+
+	&[disabled] {
+		--nc-form-mark-color: var(--nc-form-disabled-color);
+		--nc-form-border    : var(--nc-form-border-disabled);
+
+		cursor: not-allowed;
+	}
+}

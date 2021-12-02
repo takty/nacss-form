@@ -1,0 +1,39 @@
+/**
+ *
+ * Control
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-02
+ *
+ */
+
+
+@mixin custom-property {
+	--nc-form-mark-color      : LinkText;
+	--nc-form-background-color: Canvas;
+	--nc-form-border-color    : #aaa;
+	--nc-form-border-color-disabled    : #ccc;
+	--nc-form-border          : 1px solid var(--nc-form-border-color);
+	--nc-form-border-disabled : 1px solid var(--nc-form-border-color-disabled);
+	--nc-form-border-radius   : 0.25em;
+
+	--nc-form-disabled-color: #ddd;
+}
+
+@mixin form-control {
+	font-family: inherit;
+	font-size  : inherit;
+	font-weight: inherit;
+
+	line-height: 1.15;
+
+	display              : grid;
+	grid-template-columns: 1em auto;
+	gap                  : 0.5em;
+
+	align-items: baseline;
+
+	&[disabled] {
+		color: var(--nc-form-disabled-color);
+	}
+}
