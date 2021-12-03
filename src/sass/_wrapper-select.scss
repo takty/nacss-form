@@ -1,17 +1,14 @@
 /**
  *
- * Select
+ * Wrapper of Select
  *
  * @author Takuto Yanagida
- * @version 2021-12-02
+ * @version 2021-12-03
  *
  */
 
 
-@use 'common';
-
-
-@mixin select-wrapper {
+@mixin wrapper {
 	display: inline-flex;
 
 	position: relative;
@@ -30,15 +27,8 @@
 
 		pointer-events: none;
 	}
+
 	select {
-		@extend %input-base;
 		padding-inline-end: 1.5em;
-	}
-
-	&[disabled] {
-		--nc-form-mark-color: var(--nc-form-disabled-color);
-		--nc-form-border    : var(--nc-form-border-disabled);
-
-		cursor: not-allowed;
 	}
 }

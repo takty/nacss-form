@@ -1,37 +1,75 @@
+/**
+ *
+ * Common Style
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-03
+ *
+ */
+
+
+@mixin custom-property {
+	--nc-form-focus-shadow: 0 0 2px 3px #{rgba(#7bf, 0.75)};
+
+	--nc-form-font-size    : 1rem;
+	--nc-form-line-height  : 1.15;
+	--nc-form-border       : 1px solid;
+	--nc-form-border-radius: 0.25em;
+
+	// ----
+
+	--nc-form-color           : inherit;
+	--nc-form-mark-color      : LinkText;
+	--nc-form-background-color: Canvas;
+	--nc-form-border-color    : #aaa;
+
+	--nc-form-color-disabled           : #ddd;
+	--nc-form-mark-color-disabled      : #ddd;
+	--nc-form-background-color-disabled: Canvas;
+	--nc-form-border-color-disabled    : #ccc;
+
+	// ----
+
+	--nc-form-button-color           : Canvas;
+	--nc-form-button-mark-color      : Canvas;
+	--nc-form-button-background-color: LinkText;
+	--nc-form-button-border-color    : transparent;
+
+	--nc-form-button-color-disabled           : Canvas;
+	--nc-form-button-mark-color-disabled      : Canvas;
+	--nc-form-button-background-color-disabled: #ddd;
+	--nc-form-button-border-color-disabled    : transparent;
+}
+
+@mixin disabled {
+	--nc-form-color           : var(--nc-form-color-disabled);
+	--nc-form-mark-color      : var(--nc-form-mark-color-disabled);
+	--nc-form-background-color: var(--nc-form-background-color-disabled);
+	--nc-form-border-color    : var(--nc-form-border-color-disabled);
+
+	--nc-form-button-color           : var(--nc-form-button-color-disabled);
+	--nc-form-button-mark-color      : var(--nc-form-button-mark-color-disabled);
+	--nc-form-button-background-color: var(--nc-form-button-background-color-disabled);
+	--nc-form-button-border-color    : var(--nc-form-button-border-color-disabled);
+
+	cursor : not-allowed;
+	opacity: 1;
+}
+
 %focus {
 	&:focus-visible {
 		outline: none;
-		box-shadow: 0 0 2px 3px rgba(#7bf, 0.75);
+		box-shadow: var(--nc-form-focus-shadow);
 	}
 }
 
-%rect-base {
-	appearance: none;
-
-	border          : var(--nc-form-border);
-	border-radius   : var(--nc-form-border-radius);
-
-	color      : inherit;
+%base {
 	font       : inherit;
-	font-size  : 1em;
-	line-height: 1.15;
+	font-size  : var(--nc-form-font-size);
+	line-height: var(--nc-form-line-height);
 
-	@extend %focus;
+	border-radius: var(--nc-form-border-radius);
+
+	appearance     : none;
+	text-decoration: none;
 }
-
-%input-base {
-	@extend %rect-base;
-	padding   : 0.5em;
-	background-color: Canvas;
-
-	&:disabled {
-		color: var(--nc-form-disabled-color);
-		cursor: not-allowed;
-		border-color: var(--nc-form-border-color-disabled);
-		opacity: 1;
-		&::placeholder {
-			color: inherit;
-		}
-	}
-}
-

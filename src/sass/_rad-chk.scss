@@ -3,20 +3,20 @@
  * Radio Button and Checkbox
  *
  * @author Takuto Yanagida
- * @version 2021-12-02
+ * @version 2021-12-03
  *
  */
 
 
 @use 'common';
+@use 'input';
 
 
 %rad-chk-base {
-	appearance: none;
-	margin    : 0;
+	@extend %base-input;
 
+	margin: 0;
 	cursor: pointer;
-	font: inherit;
 
 	width : 1em;
 	height: 1em;
@@ -27,7 +27,6 @@
 	&::before,
 	&::after {
 		content: '';
-		color: currentColor;
 
 		position : absolute;
 		top      : 50%;
@@ -35,16 +34,9 @@
 		transform: translate(-50%, -50%);
 	}
 	&::before {
-		background-color: var(--nc-form-background-color);
 		border          : var(--nc-form-border);
-	}
-	@extend %focus;
-
-	&:disabled {
-		--nc-form-mark-color: var(--nc-form-disabled-color);
-		--nc-form-border    : var(--nc-form-border-disabled);
-
-		cursor: not-allowed;
+		border-color    : var(--nc-form-border-color);
+		background-color: var(--nc-form-background-color);
 	}
 }
 

@@ -1,0 +1,14 @@
+/**
+ *
+ * Fieldset
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-03
+ *
+ */
+
+
+@mixin main {
+	border: 1px solid #aaa;
+	border-radius: var(--nc-form-border-radius);
+}

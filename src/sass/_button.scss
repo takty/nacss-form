@@ -3,7 +3,7 @@
  * Buttons
  *
  * @author Takuto Yanagida
- * @version 2021-11-30
+ * @version 2021-12-03
  *
  */
 
@@ -11,24 +11,24 @@
 @use 'common';
 
 
-@mixin button {
-	@extend %rect-base;
-	padding   : 0.5em 1em;
+%base-button-rect {
+	@extend %base;
+	@extend %focus;
+
+	color           : var(--nc-form-button-color);
+	background-color: var(--nc-form-button-background-color);
+	border          : var(--nc-form-button-border-color);
+	border-color    : var(--nc-form-button-border-color);
+
+	padding: 0.5em 1em;
 
 	display        : inline-flex;
 	justify-content: center;
 	align-items    : center;
 
-	border-color: transparent;
 	cursor: pointer;
+}
 
-	color: Canvas;
-	background-color: var(--nc-form-mark-color);
-
-	&:disabled {
-		// background-color: var(--nc-form-disabled-color);
-		--nc-form-mark-color: var(--nc-form-disabled-color);
-
-		cursor: not-allowed;
-	}
+@mixin main {
+	@extend %base-button-rect;
 }

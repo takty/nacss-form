@@ -3,82 +3,120 @@
  * Form
  *
  * @author Takuto Yanagida
- * @version 2021-12-02
+ * @version 2021-12-03
  *
  */
 
 
-@use 'control';
+@use 'common';
 @use 'button';
 @use 'input';
-@use 'select';
 @use 'rad-chk';
+@use 'fieldset';
+@use 'wrapper-rad-chk';
+@use 'wrapper-select';
+@use 'wrapper-type-number';
 
 
 :root {
-	@include control.custom-property;
+	@include common.custom-property;
 }
 
-.form-control {
-	@include control.form-control;
 
-	& + .form-control {
-		margin-top: 1em;
-	}
+// -----------------------------------------------------------------------------
+
+
+:is(
+	input,
+	button,
+	select,
+	textarea,
+	.form-ctrl-radio,
+	.form-ctrl-checkbox,
+	.form-ctrl-number,
+	.form-ctrl-select,
+	.button
+):is(:disabled, [disabled]) {
+	@include common.disabled;
 }
 
-button,
-input[type='submit'],
-input[type='button'],
-input[type='reset'] {
-	@include button.button;
+
+// -----------------------------------------------------------------------------
+
+
+:is(button, input[type='submit' i], input[type='button' i], input[type='reset' i], .button),
+input[type='file' i]::file-selector-button {
+	@include button.main;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='url'],
-input[type='email'],
-input[type='tel'],
-input[type='search'],
-input[type='number'],
-input[type='date'],
-input[type='month'],
-input[type='week'],
-input[type='datetime'],
-input[type='datetime-local'] {
-	@include input.input;
+input[type='file' i]:focus-visible::file-selector-button {
+	box-shadow: none;
 }
-input[type='range'] {
-	@include input.input-range;
+
+
+// -----------------------------------------------------------------------------
+
+
+:is(
+	input[type='text'],
+	input[type='password'],
+	input[type='url'],
+	input[type='email'],
+	input[type='tel'],
+	input[type='search'],
+	input[type='number'],
+	input[type='date'],
+	input[type='month'],
+	input[type='week'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	select,
+	textarea
+) {
+	@include input.main;
 }
-input[type='file'] {
-	@include input.input-file;
-}
+
 input[type='color'] {
-	@include input.input-color;
+	@include input.type-color;
+}
+
+input[type='file'] {
+	@include input.type-file;
+}
+
+input[type='range'] {
+	@include input.type-range;
 }
 
 
-.form-control-number {
-	@include input.input-number-wrapper;
-}
+// -----------------------------------------------------------------------------
 
-textarea {
-	@include input.input;
-}
-
-.form-control-select {
-	@include select.select-wrapper;
-}
 
 input[type='radio'] {
 	@include rad-chk.radio;
 }
+
 input[type='checkbox'] {
 	@include rad-chk.checkbox;
 }
 
 fieldset {
-	border: 1px solid #aaa;
-	border-radius: var(--nc-form-border-radius);
+	@include fieldset.main;
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.form-ctrl-radio,
+.form-ctrl-checkbox {
+	@include wrapper-rad-chk.wrapper;
+}
+
+.form-ctrl-number {
+	@include wrapper-type-number.wrapper;
+}
+
+.form-ctrl-select {
+	@include wrapper-select.wrapper;
 }
