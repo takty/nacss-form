@@ -3,7 +3,7 @@
  * Input
  *
  * @author Takuto Yanagida
- * @version 2021-12-04
+ * @version 2021-12-05
  *
  */
 
@@ -63,4 +63,10 @@
 	vertical-align: middle;
 	padding       : 0.25rem;
 	border-radius : 0.25rem;  // For focus on Chrome
+
+	@supports (font: -apple-system-body) {
+		&:disabled {
+			opacity: 0.5;
+		}
+	}
 }
