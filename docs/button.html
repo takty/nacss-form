@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Buttons - nacss-form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/form.min.css?v205347t">
+<link rel="stylesheet" href="css/style.min.css?v205347t">
+<script>
+function disable() {
+	const es = document.querySelectorAll('input, button, select, textarea, .button, [class^="form"]');
+	for (const e of es) e.setAttribute('disabled', '');
+}
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Buttons</h1>
+		<nav><a href="index.html">Go back</a></nav>
+		<div><button onclick="disable();">Disable</button></div>
+	</header>
+
+	<main>
+		<h2>Input Elements</h2>
+		<div class="layout-wrap">
+			<input type="submit" value="<input type=submit>">
+			<input type="button" value="<input type=button>">
+			<input type="reset" value="<input type=reset>">
+		</div>
+
+		<h2>Button Elements</h2>
+		<div class="layout-wrap">
+			<button type="submit">&lt;button type=submit&gt;</button>
+			<button type="button">&lt;button type=button&gt;</button>
+			<button type="reset">&lt;button type=reset&gt;</button>
+		</div>
+
+		<h2>Anchor Elements</h2>
+		<div class="layout-wrap">
+			<a class="button">&lt;a class="button"&gt;</a>
+		</div>
+	</main>
+</body>
+</html>
