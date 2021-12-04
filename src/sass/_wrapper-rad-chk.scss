@@ -3,7 +3,7 @@
  * Wrapper of Radio Button and Checkbox
  *
  * @author Takuto Yanagida
- * @version 2021-12-03
+ * @version 2021-12-04
  *
  */
 
@@ -13,7 +13,7 @@
 	font-size  : var(--nc-form-font-size);
 	line-height: var(--nc-form-line-height);
 
-	color: var(--nc-form-color);
+	color: var(--nc-input-color);
 
 	display              : grid;
 	grid-template-columns: 1em auto;

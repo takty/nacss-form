@@ -3,7 +3,7 @@
  * Radio Button and Checkbox
  *
  * @author Takuto Yanagida
- * @version 2021-12-03
+ * @version 2021-12-04
  *
  */
 
@@ -34,9 +34,9 @@
 		transform: translate(-50%, -50%);
 	}
 	&::before {
-		border          : var(--nc-form-border);
-		border-color    : var(--nc-form-border-color);
-		background-color: var(--nc-form-background-color);
+		border          : var(--nc-input-border-base);
+		border-color    : var(--nc-input-border-color);
+		background-color: var(--nc-input-background-color);
 	}
 }
 
@@ -52,7 +52,7 @@
 		border-radius: 50%;
 	}
 	&::after {
-		border : 0.33em solid var(--nc-form-mark-color);
+		border : 0.33em solid var(--nc-input-mark-color);
 		opacity: 0;
 	}
 	&:checked::after {
@@ -74,15 +74,15 @@
 		width : 0.75em;
 		height: 0.75em;
 
-		box-shadow: inset 0 0 0 2em var(--nc-form-background-color);  // For print
+		box-shadow: inset 0 0 0 2em var(--nc-input-background-color);  // For print
 		clip-path : polygon(14% 44%, 0 65%, 55% 100%, 100% 12%, 78% 0%, 45% 64%);
 		opacity   : 0;
 	}
 	&:checked {
 		&::before {
-			background-color: var(--nc-form-mark-color);
-			border-color    : var(--nc-form-mark-color);
-			box-shadow      : inset 0 0 0 2em var(--nc-form-mark-color);  // For print
+			background-color: var(--nc-input-mark-color);
+			border-color    : var(--nc-input-mark-color);
+			box-shadow      : inset 0 0 0 2em var(--nc-input-mark-color);  // For print
 		}
 		&::after {
 			opacity: 1;

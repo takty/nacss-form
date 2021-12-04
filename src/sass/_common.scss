@@ -3,7 +3,7 @@
  * Common Style
  *
  * @author Takuto Yanagida
- * @version 2021-12-03
+ * @version 2021-12-04
  *
  */
 
@@ -13,44 +13,47 @@
 
 	--nc-form-font-size    : 1rem;
 	--nc-form-line-height  : 1.15;
-	--nc-form-border       : 1px solid;
 	--nc-form-border-radius: 0.25em;
 
 	// ----
 
-	--nc-form-color           : inherit;
-	--nc-form-mark-color      : LinkText;
-	--nc-form-background-color: Canvas;
-	--nc-form-border-color    : #aaa;
+	--nc-input-border-base: 1px solid;
 
-	--nc-form-color-disabled           : #ddd;
-	--nc-form-mark-color-disabled      : #ddd;
-	--nc-form-background-color-disabled: Canvas;
-	--nc-form-border-color-disabled    : #ccc;
+	--nc-input-color           : inherit;
+	--nc-input-mark-color      : LinkText;
+	--nc-input-background-color: Canvas;
+	--nc-input-border-color    : #aaa;
+
+	--nc-input-color-disabled           : #ddd;
+	--nc-input-mark-color-disabled      : #ddd;
+	--nc-input-background-color-disabled: Canvas;
+	--nc-input-border-color-disabled    : #ccc;
 
 	// ----
 
-	--nc-form-button-color           : Canvas;
-	--nc-form-button-mark-color      : Canvas;
-	--nc-form-button-background-color: LinkText;
-	--nc-form-button-border-color    : transparent;
+	--nc-button-border-base: 1px solid;
 
-	--nc-form-button-color-disabled           : Canvas;
-	--nc-form-button-mark-color-disabled      : Canvas;
-	--nc-form-button-background-color-disabled: #ddd;
-	--nc-form-button-border-color-disabled    : transparent;
+	--nc-button-color           : Canvas;
+	--nc-button-mark-color      : Canvas;
+	--nc-button-background-color: LinkText;
+	--nc-button-border-color    : transparent;
+
+	--nc-button-color-disabled           : Canvas;
+	--nc-button-mark-color-disabled      : Canvas;
+	--nc-button-background-color-disabled: #ddd;
+	--nc-button-border-color-disabled    : transparent;
 }
 
 @mixin disabled {
-	--nc-form-color           : var(--nc-form-color-disabled);
-	--nc-form-mark-color      : var(--nc-form-mark-color-disabled);
-	--nc-form-background-color: var(--nc-form-background-color-disabled);
-	--nc-form-border-color    : var(--nc-form-border-color-disabled);
+	--nc-input-color           : var(--nc-input-color-disabled);
+	--nc-input-mark-color      : var(--nc-input-mark-color-disabled);
+	--nc-input-background-color: var(--nc-input-background-color-disabled);
+	--nc-input-border-color    : var(--nc-input-border-color-disabled);
 
-	--nc-form-button-color           : var(--nc-form-button-color-disabled);
-	--nc-form-button-mark-color      : var(--nc-form-button-mark-color-disabled);
-	--nc-form-button-background-color: var(--nc-form-button-background-color-disabled);
-	--nc-form-button-border-color    : var(--nc-form-button-border-color-disabled);
+	--nc-button-color           : var(--nc-button-color-disabled);
+	--nc-button-mark-color      : var(--nc-button-mark-color-disabled);
+	--nc-button-background-color: var(--nc-button-background-color-disabled);
+	--nc-button-border-color    : var(--nc-button-border-color-disabled);
 
 	cursor : not-allowed;
 	opacity: 1;
