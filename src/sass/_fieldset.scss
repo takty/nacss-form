@@ -9,6 +9,8 @@
 
 
 @mixin fieldset {
-	border: 1px solid #aaa;
+	padding: 0.5em 1em 1em;
+
+	border       : 1px solid #aaa;
 	border-radius: var(--nc-form-border-radius);
 }

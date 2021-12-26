@@ -61,7 +61,7 @@
 
 %focus {
 	&:focus-visible {
-		outline: none;
+		outline   : none;
 		box-shadow: var(--nc-form-focus-shadow);
 	}
 }
