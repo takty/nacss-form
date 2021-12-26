@@ -55,6 +55,10 @@
 	@extend %base-input;
 
 	border-radius : 0.25rem;  // For focus on Chrome
+
+	&:focus-visible::file-selector-button {
+		box-shadow: none;
+	}
 }
 
 @mixin type-range {

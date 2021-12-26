@@ -42,42 +42,38 @@ input[type='file' i]::file-selector-button {
 	@include form.button;
 }
 
-input[type='file' i]:focus-visible::file-selector-button {
-	box-shadow: none;
-}
-
 
 // -----------------------------------------------------------------------------
 
 
 :is(
-	input[type='text'],
-	input[type='password'],
-	input[type='url'],
-	input[type='email'],
-	input[type='tel'],
-	input[type='search'],
-	input[type='number'],
-	input[type='date'],
-	input[type='month'],
-	input[type='week'],
-	input[type='datetime'],
-	input[type='datetime-local'],
+	input[type='text' i],
+	input[type='password' i],
+	input[type='url' i],
+	input[type='email' i],
+	input[type='tel' i],
+	input[type='search' i],
+	input[type='number' i],
+	input[type='date' i],
+	input[type='month' i],
+	input[type='week' i],
+	input[type='datetime' i],
+	input[type='datetime-local' i],
 	select,
 	textarea
 ) {
 	@include form.input;
 }
 
-input[type='color'] {
+input[type='color' i] {
 	@include form.type-color;
 }
 
-input[type='file'] {
+input[type='file' i] {
 	@include form.type-file;
 }
 
-input[type='range'] {
+input[type='range' i] {
 	@include form.type-range;
 }
 
@@ -85,11 +81,11 @@ input[type='range'] {
 // -----------------------------------------------------------------------------
 
 
-input[type='radio'] {
+input[type='radio' i] {
 	@include form.radio;
 }
 
-input[type='checkbox'] {
+input[type='checkbox' i] {
 	@include form.checkbox;
 }
 
