@@ -3,7 +3,7 @@
  * Buttons
  *
  * @author Takuto Yanagida
- * @version 2021-12-04
+ * @version 2021-12-26
  *
  */
 
@@ -29,6 +29,6 @@
 	cursor: pointer;
 }
 
-@mixin main {
+@mixin button {
 	@extend %base-button-rect;
 }

@@ -3,12 +3,12 @@
  * Fieldset
  *
  * @author Takuto Yanagida
- * @version 2021-12-03
+ * @version 2021-12-26
  *
  */
 
 
-@mixin main {
+@mixin fieldset {
 	border: 1px solid #aaa;
 	border-radius: var(--nc-form-border-radius);
 }

@@ -3,12 +3,12 @@
  * Common Style
  *
  * @author Takuto Yanagida
- * @version 2021-12-04
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property {
 	--nc-form-focus-shadow: 0 0 2px 3px #{rgba(#7bf, 0.75)};
 
 	--nc-form-font-size    : 1rem;

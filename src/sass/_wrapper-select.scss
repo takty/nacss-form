@@ -3,12 +3,12 @@
  * Wrapper of Select
  *
  * @author Takuto Yanagida
- * @version 2021-12-04
+ * @version 2021-12-26
  *
  */
 
 
-@mixin wrapper {
+@mixin wrapper-select {
 	display: inline-flex;
 
 	position: relative;

@@ -3,7 +3,7 @@
  * Input
  *
  * @author Takuto Yanagida
- * @version 2021-12-05
+ * @version 2021-12-26
  *
  */
 
@@ -34,7 +34,7 @@
 	}
 }
 
-@mixin main {
+@mixin input {
 	@extend %base-input-rect;
 }
 

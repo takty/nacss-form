@@ -3,12 +3,12 @@
  * Wrapper of Input Number
  *
  * @author Takuto Yanagida
- * @version 2021-12-04
+ * @version 2021-12-26
  *
  */
 
 
-@mixin wrapper {
+@mixin wrapper-type-number {
 	display: inline-flex;
 
 	// For Chrome & Safari
