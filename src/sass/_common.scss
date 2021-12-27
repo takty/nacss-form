@@ -3,7 +3,7 @@
  * Common Style
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -17,6 +17,7 @@
 
 	// ----
 
+	--nc-input-padding    : 0.5em;
 	--nc-input-border-base: 1px solid;
 
 	--nc-input-color           : inherit;
@@ -31,6 +32,7 @@
 
 	// ----
 
+	--nc-button-padding    : 0.5em 1em;
 	--nc-button-border-base: 1px solid;
 
 	--nc-button-color           : Canvas;
@@ -42,6 +44,11 @@
 	--nc-button-mark-color-disabled      : Canvas;
 	--nc-button-background-color-disabled: #ddd;
 	--nc-button-border-color-disabled    : transparent;
+
+	// ----
+
+	--nc-fieldset-padding: 0.5em 1em 1em;
+	--nc-fieldset-border : 1px solid #aaa;
 }
 
 @mixin disabled {

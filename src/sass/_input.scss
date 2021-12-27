@@ -3,7 +3,7 @@
  * Input
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -27,7 +27,7 @@
 	border          : var(--nc-input-border-base);
 	border-color    : var(--nc-input-border-color);
 
-	padding: 0.5em;
+	padding: var(--nc-input-padding);
 
 	&::placeholder {
 		color: inherit;

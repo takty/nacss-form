@@ -3,7 +3,7 @@
  * Form
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -19,7 +19,7 @@
 // -----------------------------------------------------------------------------
 
 
-:is(
+:where(
 	input,
 	button,
 	select,
@@ -29,7 +29,7 @@
 	.form-ctrl-number,
 	.form-ctrl-select,
 	.button
-):is(:disabled, [disabled]) {
+):where(:disabled, [disabled]) {
 	@include form.disabled;
 }
 
@@ -37,8 +37,14 @@
 // -----------------------------------------------------------------------------
 
 
-:is(button, input[type='submit' i], input[type='button' i], input[type='reset' i], .button),
-input[type='file' i]::file-selector-button {
+:where(
+	button,
+	input[type='submit' i],
+	input[type='button' i],
+	input[type='reset' i],
+	.button
+),
+:where(input[type='file' i])::file-selector-button {
 	@include form.button;
 }
 
@@ -46,7 +52,7 @@ input[type='file' i]::file-selector-button {
 // -----------------------------------------------------------------------------
 
 
-:is(
+:where(
 	input[type='text' i],
 	input[type='password' i],
 	input[type='url' i],
@@ -65,15 +71,15 @@ input[type='file' i]::file-selector-button {
 	@include form.input;
 }
 
-input[type='color' i] {
+:where(input[type='color' i]) {
 	@include form.type-color;
 }
 
-input[type='file' i] {
+:where(input[type='file' i]) {
 	@include form.type-file;
 }
 
-input[type='range' i] {
+:where(input[type='range' i]) {
 	@include form.type-range;
 }
 
@@ -81,15 +87,15 @@ input[type='range' i] {
 // -----------------------------------------------------------------------------
 
 
-input[type='radio' i] {
+:where(input[type='radio' i]) {
 	@include form.radio;
 }
 
-input[type='checkbox' i] {
+:where(input[type='checkbox' i]) {
 	@include form.checkbox;
 }
 
-fieldset {
+:where(fieldset) {
 	@include form.fieldset;
 }
 

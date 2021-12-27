@@ -3,7 +3,7 @@
  * Buttons
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2021-12-27
  *
  */
 
@@ -20,7 +20,7 @@
 	border          : var(--nc-button-border-base);
 	border-color    : var(--nc-button-border-color);
 
-	padding: 0.5em 1em;
+	padding: var(--nc-button-padding);
 
 	display        : inline-flex;
 	justify-content: center;
