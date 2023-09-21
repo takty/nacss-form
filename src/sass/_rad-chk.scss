@@ -1,16 +1,12 @@
 /**
- *
  * Radio Button and Checkbox
  *
  * @author Takuto Yanagida
  * @version 2021-12-04
- *
  */
-
 
 @use 'common';
 @use 'input';
-
 
 %rad-chk-base {
 	@extend %base-input;

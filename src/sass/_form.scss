@@ -1,12 +1,9 @@
 /**
- *
  * Form
  *
  * @author Takuto Yanagida
  * @version 2021-12-26
- *
  */
-
 
 @forward 'common';
 @forward 'button';
@@ -25,7 +22,6 @@
 @use 'wrapper-rad-chk';
 @use 'wrapper-select';
 @use 'wrapper-type-number';
-
 
 @mixin property {
 	@include common.property;

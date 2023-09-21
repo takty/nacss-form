@@ -1,19 +1,14 @@
 /**
- *
  * Buttons
  *
  * @author Takuto Yanagida
- * @version 2022-08-16
- *
+ * @version 2023-09-21
  */
-
 
 @use 'common';
 
-
 %base-button-rect {
 	@extend %base;
-	@extend %focus;
 
 	color           : var(--nc-button-color);
 	background-color: var(--nc-button-background-color);

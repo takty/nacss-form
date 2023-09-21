@@ -1,15 +1,11 @@
 /**
- *
  * Form
  *
  * @author Takuto Yanagida
  * @version 2021-12-27
- *
  */
 
-
 @use '_form';
-
 
 :root {
 	@include form.property;
